@@ -17,7 +17,7 @@ def do_pack():
     archive_name = f'web_static_{timestamp}.tgz'
     target_folder = f'versions'
     local(f'mkdir -p {target_folder}')
-    result = local(f'tar -vczf versions/{archive_name} -C {source} .',
+    result = local(f'tar -vczf versions/{archive_name} {source} ',
                    capture=True)
     archive_path = f'{os.getcwd}/{target_folder}'
 
