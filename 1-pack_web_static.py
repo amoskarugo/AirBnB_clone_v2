@@ -12,7 +12,7 @@ def do_pack():
     """
     function that creates tgz archive from a given directory
     """
-    source = "web_static2"
+    source = "web_static"
     timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
     archive_name = f'web_static_{timestamp}.tgz'
     target_folder = f'versions'

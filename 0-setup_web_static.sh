@@ -17,7 +17,7 @@ echo "<html>
 </html>" >> /data/web_static/releases/test/index.html
 
 if [ -h /data/web_static/current ]; then
-    rm /data/web_static/current
+    rm -rf /data/web_static/current
 else
     sudo ln -s /data/web_static/releases/test/ /data/web_static/current
 fi
