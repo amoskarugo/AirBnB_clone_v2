@@ -18,10 +18,9 @@ echo "<html>
 
 if [ -h /data/web_static/current ]; then
     rm -rf /data/web_static/current
-else
-    sudo ln -s /data/web_static/releases/test/ /data/web_static/current
 fi
 
+sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 sudo chown -R ubuntu:ubuntu /data/
 
 # update Nginx config to serve /data/web_static/current at /hbnb_static/
