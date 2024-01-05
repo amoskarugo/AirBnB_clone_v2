@@ -33,6 +33,7 @@ def text(text):
     return f'C {string}'
 
 
+@app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python(text):
     """
